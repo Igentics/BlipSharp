@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlipSharp", "src\BlipSharp\BlipSharp.csproj", "{A05FD836-9AA6-44E4-93B6-799DAEEE6CA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlipSharp.Tests", "src\Blipsharp.Tests\BlipSharp.Tests.csproj", "{27CE1BCF-05DD-4FED-92F6-0066D6953AC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A05FD836-9AA6-44E4-93B6-799DAEEE6CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A05FD836-9AA6-44E4-93B6-799DAEEE6CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A05FD836-9AA6-44E4-93B6-799DAEEE6CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A05FD836-9AA6-44E4-93B6-799DAEEE6CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CE1BCF-05DD-4FED-92F6-0066D6953AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CE1BCF-05DD-4FED-92F6-0066D6953AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CE1BCF-05DD-4FED-92F6-0066D6953AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CE1BCF-05DD-4FED-92F6-0066D6953AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
