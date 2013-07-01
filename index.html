@@ -1,52 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Blipsharp : C# wrapper for the blipfoto v3 api" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Blipsharp by Igentics</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Blipsharp</title>
   </head>
-
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Igentics/BlipSharp">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Igentics/BlipSharp/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Igentics/BlipSharp/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Igentics/BlipSharp">View on GitHub</a>
+    <div class="wrapper">
 
-          <h1 id="project_title">Blipsharp</h1>
-          <h2 id="project_tagline">C# wrapper for the blipfoto v3 api</h2>
+      <section>
+        <div id="title">
+          <h1>Blipsharp</h1>
+          <p>C# wrapper for the blipfoto v3 api</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Igentics">Igentics</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Igentics/BlipSharp/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Igentics/BlipSharp/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <h2>
+<a name="prerequisits" class="anchor" href="#prerequisits"><span class="octicon octicon-link"></span></a>Prerequisits</h2>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="blipsharp" class="anchor" href="#blipsharp"><span class="octicon octicon-link"></span></a>BlipSharp</h1>
+<ul>
+<li>Visual Studio 2010</li>
+<li>Visual Studio 2012</li>
+</ul><p>The Blipsharp C# wrapper is built using <strong>PCL</strong> ( <em>Portable Class Libraries</em> ) in order to take advantage of the cross platform nature of the .net framework. You will need to install the latest service pack for <strong>Visual Studio 2010</strong> in order to load this feature. <strong>Visual Studio 2012</strong> is fully supported.</p>
 
-<p>C# wrapper for the <a href="http://blipfoto.com">blipfoto</a> v3 api</p>
+<ul>
+<li>Microsoft.Bcl.*</li>
+<li>Newtonsoft.JSON</li>
+</ul><p>The libraries above are included in the packages.config file and are available on nuget.</p>
+
+<hr><h2>
+<a name="apicontext-context-class" class="anchor" href="#apicontext-context-class"><span class="octicon octicon-link"></span></a>ApiContext Context Class</h2>
+
+<p>The BlipSharp ApiContext Context class is the communication layer of the wrapper library and it is recommended you use the Singleton pattern for instantiating your context</p>
+
+<p><code>
+private ApiContext _context;
+public ApiContext Context
+{
+    get { return _context ?? (_context = new ApiContext {
+                ApiKey = ConfigurationManager.AppSettings["BlipSharp.ApiKey"],
+                ApiSecret = ConfigurationManager.AppSettings["BlipSharp.ApiSecret"],
+                PermissionsURL = ConfigurationManager.AppSettings["BlipSharp.AuthenticationUrl"]
+            });
+        }
+}
+</code>  </p>
       </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Blipsharp maintained by <a href="https://github.com/Igentics">Igentics</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
